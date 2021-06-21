@@ -1,0 +1,63 @@
+<header>
+
+  <img src="assets/Logo2.png" class="headerimg">
+
+</header>
+
+<div class="contenedor">
+  <div class="izquierda">
+    <div class="menu">
+
+
+      <button class="botones"><a [routerLink]="[ '../home'] " routerLinkActive="active"> HOME </a></button>
+      <button class="botones"><a [routerLink]="[ '../about'] "> ABOUT </a></button>
+      <button class="botones"><a [routerLink]="[ '../trailer'] ">TRAILER</a></button>
+      <button class="botones"><a [routerLink]="[ '../characters'] "> CHARACTERS</a></button>
+
+    </div>
+    <div class="iconos">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </div>
+
+
+
+ <div class="formulario">
+   <div>
+     <p> <h1>¡SIEMPRE PRIMERO!</h1>
+
+     <p> Regístrate para recibir las noticias de Cyberpunk 2077.
+   </div>
+
+   <br>
+   <div class="inputs">
+     <label>
+       <input class="email" type="email" placeholder="Introduce tu direccion de correo electronico" [(ngModel)]="valor">
+     </label>
+
+     <br>
+     <label>
+       <input  class="check" type="checkbox">Me gustaría recibir noticias, ofertas especiales y otras informaciones de CD PROJEKT y tengo 16 años o más.
+     </label>
+     <p>
+       CD PROJEKT RED será responsable de tu información personal. Para más información, por favor revisa la Política de privacidad de CD PROJEKT
+     </p>
+     <button class="Enviar" (click)="getEmail(valor)">
+       ENVIAR
+     </button>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+

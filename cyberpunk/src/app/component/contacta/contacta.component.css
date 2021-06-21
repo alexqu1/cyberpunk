@@ -1,0 +1,62 @@
+.formulario {
+
+
+  margin-top: 6em;
+  text-align: center;
+width: 80%;
+
+}
+.inputs{
+
+  margin-left: 30%;
+  width: 35%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.email{
+  margin-left: 1em;
+  margin-bottom: 1em;
+  width: 200%;
+  font-size: 22px;
+  padding-left: 1em;
+  padding-bottom: 0.1em;
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  transition:linear  0.4s;
+}
+.email:focus{
+  padding-bottom: 0.6em;
+}
+
+.check {
+  margin-right: 1em;
+
+  margin-left: 1em;
+
+}
+
+/*boton Enviar */
+.Enviar {
+  margin-top: 1em;
+  color: black;
+  border: none;
+  background: transparent;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  width: 20%;
+  font-size: 22px;
+  height: 50%;
+  margin-left: 40%;
+  transition: 1s;
+
+}
+.Enviar:hover {
+
+
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+
+}

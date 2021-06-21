@@ -1,0 +1,77 @@
+<header>
+
+  <img src="assets/Logo2.png" class="headerimg">
+
+</header>
+
+<div class="contenedor">
+
+  <div class="izquierda">
+
+    <div class="menu">
+
+
+      <button class="botones"><a [routerLink]="[ '../home'] " routerLinkActive="active"> HOME </a></button>
+      <button class="botones"><a [routerLink]="[ '../about'] "> ABOUT </a></button>
+      <button class="botones"><a [routerLink]="[ '../trailer'] ">TRAILER</a></button>
+      <button class="botones"><a [routerLink]="[ '../characters'] "> CHARACTERS</a></button>
+      <button class="botones"><a [routerLink]="[ '../contacta'] "> CONTACTA</a></button>
+
+    </div>
+    <img src="assets/palanca2.png"  [ngClass]="{'palanca': fondo, 'palanca2': !fondo}" (click)="changeFondo()">
+    <img src="assets/palanca.png"  [ngClass]="{'palanca2': fondo, 'palanca': !fondo}" (click)="changeFondo()">
+    <div class="iconos">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </div>
+
+  <div class="derecha">
+    <div class="plataformas">
+      <p>SELECT PLATFORM</p>
+      <i class="fab fa-playstation" (click)="togglePlayStation()"></i>
+      <i class="fab fa-xbox" (click)="toggleXbox()"></i>
+      <i class="fas fa-desktop" (click)="togglePc()"></i>
+
+      <div class="PlataformaSeleccionada" >
+        <img class="imgPlataforma" src="assets/playstati.png" *ngIf="play">
+        <img class="imgPlataforma" src="assets/xbox.png" *ngIf="xbox">
+        <img class="imgPlataforma" src="assets/computadora.png" *ngIf="computadora">
+
+      </div>
+    </div>
+
+    <div  [ngClass]="{'chica': fondo, 'personaje': !fondo}">
+      <p class="numero">2 0 7 7 </p>
+
+
+      <div class="botonPreorder">
+
+        <button class="cybr-btn">
+          <a style="color: yellow" [routerLink]="[ '../comprar'] ">
+          COMPRAR<span aria-hidden></span>
+          <span aria-hidden class="cybr-btn__glitch">COMPRAR</span>
+          </a>
+        </button>
+
+        <button class="cybr-btn">
+          <a style="color: yellow" [routerLink]="[ '../about'] ">
+            ABOUT<span aria-hidden></span>
+            <span aria-hidden class="cybr-btn__glitch">ABOUT</span>
+          </a>
+        </button>
+
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+
+

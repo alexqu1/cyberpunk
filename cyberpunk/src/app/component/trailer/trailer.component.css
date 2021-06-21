@@ -1,0 +1,22 @@
+.contenedor, header {
+  background: black;
+}
+
+a:hover {
+  color: yellow;
+  border-left: 3px outset white;
+}
+
+.trailer {
+
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  width: 70%;
+  margin-top: 5em;
+  margin-left: 5%;
+  height: 70vh;
+
+
+}

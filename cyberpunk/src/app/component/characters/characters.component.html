@@ -1,0 +1,80 @@
+<header>
+
+  <img src="assets/Logo2.png" class="headerimg">
+
+</header>
+<nav>
+
+</nav>
+
+<div class="contenedor">
+  <div class="izquierda">
+
+
+
+
+
+    <div class="formulario">
+      <label>Titulo</label>
+      <input type="text" [(ngModel)]="valor">
+
+      <label>BIO</label>
+      <input type="text" [(ngModel)]="valor2">
+
+      <input type="file" (change)="readUrl($event.target)">
+      <!--<img [src]='profilePhotoImage' *ngIf="profilePhotoImage">-->
+      <button (click)="createPersonaje(valor,valor2)">
+        Subir
+      </button>
+
+    </div>
+
+
+
+
+    <div class="menu">
+
+
+      <button class="botones"><a [routerLink]="[ '../home'] "> HOME </a></button>
+      <button class="botones"><a [routerLink]="[ '../about'] ">ABOUT</a></button>
+      <button class="botones"><a [routerLink]="[ '../trailer'] ">TRAILER </a></button>
+      <button class="botones"><a [routerLink]="[ '../contacta'] "> CONTACTA</a></button>
+
+
+
+    </div>
+    <div class="iconos">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-youtube"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </div>
+
+  <div class="characters">
+    <div class="cartas" *ngFor="let item of personajes">
+      <div class="card" style="width: 18rem;">
+        <img [src]="'http://localhost:8081/personaje/' + item.id + '/image'" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.titulo}}</h5>
+          <p class="card-text">{{item.bio}}</p>
+          <a [routerLink]="['/characters/' + item.id]" class="btn btn-primary"   >Ver+</a>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+
+    </footer>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+

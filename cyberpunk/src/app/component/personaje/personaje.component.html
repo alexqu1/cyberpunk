@@ -1,0 +1,29 @@
+<header >
+
+  <img src="assets/Logo2.png" class="headerimg">
+</header>
+
+
+<div class="contenedorPersonaje">
+
+  <h1 class="titulo">{{ personaje?.titulo }}</h1>
+
+
+  <img [src]="'http://localhost:8081/personaje/' + personaje?.id + '/image'" class="imagen">
+
+
+  <div class="texto">
+    {{ personaje?.bio }}
+
+
+  </div>
+  <div>
+    <button class="cybr-btn"><a [routerLink]="[ '/characters'] ">
+      Regresar<span aria-hidden></span>
+      <span aria-hidden class="cybr-btn__glitch">Regresar</span>
+    </a>
+    </button>
+
+  </div>
+</div>
+
